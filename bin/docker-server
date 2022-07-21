@@ -5,7 +5,7 @@ set -e
 
 gunicorn posthog.wsgi \
     --config gunicorn.config.py \
-    --bind 0.0.0.0:8000 \
+    --bind [::]:8003 \
     --log-file - \
     --log-level info \
     --access-logfile - \
